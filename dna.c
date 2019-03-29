@@ -5,7 +5,7 @@
 void load_string(FILE *file, int *p, char *s, int t) {
   if (fscanf(file, "%d", p) != 1) {
     fprintf(stderr, "erro ao ler tamanho do teste %d\n", t);
-  }
+  } 
 
   char c;
   do {
@@ -19,6 +19,7 @@ void load_string(FILE *file, int *p, char *s, int t) {
 
 int mlcs_w(char a[], int n, char b[], int m, int length[MAX_SIZE + 1][MAX_SIZE + 1]) {
   if (length[n][m] != -1) {
+    printf("CHECOU SE EH -1");
     return length[n][m];
   }
   if (m == 0 || n == 0) {
